@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" method="upgrade">
+	<name>DuckDuckGo Search Module</name>
+	<author>Emmanuel Fontan</author>
+	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
+	<authorUrl>www.elgolem.com.ar</authorUrl>
+	<creationDate>12/04/2012</creationDate>
+	<copyright>2012 Emmanuel Fontan</copyright>
+	<license>GNU General Public License v3.0 - http://www.gnu.org/licenses/</license>
+	<version>1.0.1</version>
+	
+	<description>
+		This module will display the official DuckDuckGo Search Box on your site.
+	</description>
+
+	<files>
+		<filename module="mod_duckduckgo_search">mod_duckduckgo_search.php</filename>
+		<filename>helper.php</filename>
+		<filename>LICENSE.php</filename>
+        <filename>index.html</filename>
+		<folder>tmpl/</folder>
+	</files>
+	
+	<languages folder="language">	
+		<language tag="en-GB">en-GB/en-GB.mod_duckduckgo_search.ini</language>		
+		<language tag="es-ES">es-ES/es-ES.mod_duckduckgo_search.ini</language>		
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+				<field name="width" 
+					type="text" 
+					default="200" 
+					label="MOD_DUCKDUCKGO_SEARCH_WIDTH" 
+					description="MOD_DUCKDUCKGO_SEARCH_WIDTH_DESC" />
+				
+				<field name="show_ducklogo" 
+					type="radio" 
+					default="off" 
+					label="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO" 
+					description="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO_DESC" >
+						<option value="off">MOD_DUCKDUCKGO_SEARCH_NO</option>
+						<option value="on">MOD_DUCKDUCKGO_SEARCH_YES</option>
+				</field>
+				
+				<field name="background_color" 
+					type="text" 
+					default="" 
+					label="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR" 
+					description="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR_DESC" />
+					
+				<field name="site_url" 
+					type="text" 
+					default="" 
+					label="MOD_DUCKDUCKGO_SEARCH_SITE_URL" 
+					description="MOD_DUCKDUCKGO_SEARCH_SITE_URL_DESC" />
+					
+				<field name="box_text" 
+					type="text" 
+					default="Search..." 
+					label="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT" 
+					description="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT_DESC" />
+					
+			</fieldset>	
+		
+		</fields>		
+	</config>
+	
+</extension>
