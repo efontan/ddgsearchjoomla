@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 /**
  * @package ElGolem
  * @subpackage mod_duckduckgo_search
- * @version   1.0.1 - 12/04/2012
+ * @version   0.1.1 - 31/05/2012
  * @author    Emmanuel Fontan
  * @copyright (C) 2012 Emmanuel Fontan (email : fontanemmanel@gmail.com)
  *
