@@ -4,68 +4,159 @@
 	<author>Emmanuel Fontan</author>
 	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
 	<authorUrl>www.elgolem.com.ar</authorUrl>
-	<creationDate>12/04/2012</creationDate>
+	<creationDate>10/07/2012</creationDate>
 	<copyright>2012 Emmanuel Fontan</copyright>
-	<license>GNU General Public License v3.0 - http://www.gnu.org/licenses/</license>
-	<version>1.0.1</version>
-	
+	<license>GNU General Public License v3.0 - http://www.gnu.org/licenses/
+	</license>
+	<version>1.1.1</version>
+
 	<description>
-		This module will display the official DuckDuckGo Search Box on your site.
+		This module will display the official DuckDuckGo Search
+		Box on your site.
 	</description>
 
 	<files>
 		<filename module="mod_duckduckgo_search">mod_duckduckgo_search.php</filename>
 		<filename>helper.php</filename>
 		<filename>LICENSE.php</filename>
-        <filename>index.html</filename>
+		<filename>index.html</filename>
 		<folder>tmpl/</folder>
 	</files>
-	
-	<languages folder="language">	
-		<language tag="en-GB">en-GB/en-GB.mod_duckduckgo_search.ini</language>		
-		<language tag="es-ES">es-ES/es-ES.mod_duckduckgo_search.ini</language>		
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_duckduckgo_search.ini
+		</language>
+		<language tag="es-ES">es-ES/es-ES.mod_duckduckgo_search.ini
+		</language>
 	</languages>
-	
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-			
-				<field name="width" 
-					type="text" 
-					default="200" 
-					label="MOD_DUCKDUCKGO_SEARCH_WIDTH" 
-					description="MOD_DUCKDUCKGO_SEARCH_WIDTH_DESC" />
-				
-				<field name="show_ducklogo" 
-					type="radio" 
-					default="off" 
-					label="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO" 
-					description="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO_DESC" >
-						<option value="off">MOD_DUCKDUCKGO_SEARCH_NO</option>
-						<option value="on">MOD_DUCKDUCKGO_SEARCH_YES</option>
+
+				<field name="width" type="text" default="200"
+					label="MOD_DUCKDUCKGO_SEARCH_WIDTH" description="MOD_DUCKDUCKGO_SEARCH_WIDTH_DESC" />
+
+				<field name="show_ducklogo" type="list" default="off"
+					label="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO" description="MOD_DUCKDUCKGO_SEARCH_SHOW_LOGO_DESC">
+					<option value="off">MOD_DUCKDUCKGO_SEARCH_NO</option>
+					<option value="on">MOD_DUCKDUCKGO_SEARCH_YES</option>
 				</field>
-				
-				<field name="background_color" 
-					type="text" 
-					default="" 
-					label="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR" 
-					description="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR_DESC" />
-					
-				<field name="site_url" 
-					type="text" 
-					default="" 
-					label="MOD_DUCKDUCKGO_SEARCH_SITE_URL" 
-					description="MOD_DUCKDUCKGO_SEARCH_SITE_URL_DESC" />
-					
-				<field name="box_text" 
-					type="text" 
-					default="Search..." 
-					label="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT" 
-					description="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT_DESC" />
-					
-			</fieldset>	
-		
-		</fields>		
+
+				<field name="background_color" type="text" default=""
+					label="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR" description="MOD_DUCKDUCKGO_SEARCH_BACKGROUND_COLOR_DESC" />
+
+				<field name="site_url" type="text" default=""
+					label="MOD_DUCKDUCKGO_SEARCH_SITE_URL" description="MOD_DUCKDUCKGO_SEARCH_SITE_URL_DESC" />
+
+				<field name="box_text" type="text" default="Search..."
+					label="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT" description="MOD_DUCKDUCKGO_SEARCH_BOX_TEXT_DESC" />
+
+			</fieldset>
+
+			<fieldset name="results">
+
+				<field name="header_color" type="list" default="r3"
+					label="MOD_DUCKDUCKGO_HEADER_COLOR" description="MOD_DUCKDUCKGO_HEADER_COLOR_DESC">
+					<option value="r3">Muted red (default)</option>
+					<option value="b2">Blue</option>
+					<option value="g2">Green</option>
+					<option value="o">Orange</option>
+					<option value="p">Purple</option>
+					<option value="r2">Red</option>
+					<option value="w">White</option>
+					<option value="b">Light blue</option>
+					<option value="d">Light green</option>
+					<option value="g">Intense green</option>
+					<option value="r">Intense red</option>
+					<option value="ct">Gray</option>
+					<option value="kt">Black</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="header_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_HEADER_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_HEADER_COLOR_CUSTOM_DESC" />
+
+				<field name="highlight_color" type="list" default="e"
+					label="MOD_DUCKDUCKGO_HIGHLIGHT_COLOR" description="MOD_DUCKDUCKGO_HIGHLIGHT_COLOR_DESC">
+					<option value="e">Grey (default)</option>
+					<option value="g">Green</option>
+					<option value="b">Blue</option>
+					<option value="y">Yellow</option>
+					<option value="p">Pink</option>
+					<option value="t">Tan</option>
+					<option value="-1">Off</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="highlight_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_HIGHLIGHT_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_HIGHLIGHT_COLOR_CUSTOM_DESC" />
+
+				<field name="url_color" type="list" default="r"
+					label="MOD_DUCKDUCKGO_URLS_COLOR" description="MOD_DUCKDUCKGO_URLS_COLOR_DESC">
+					<option value="r">Red (default)</option>
+					<option value="g">Green</option>
+					<option value="l">Black</option>
+					<option value="b">Blue</option>
+					<option value="p">Purple</option>
+					<option value="o">Orange</option>
+					<option value="e">Grey</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="url_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_URLS_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_URLS_COLOR_CUSTOM_DESC" />
+
+				<field name="bgcolor_results" type="list" default="ow"
+					label="MOD_DUCKDUCKGO_BGCOLOR_RESULTS" description="MOD_DUCKDUCKGO_BGCOLOR_RESULTS_DESC">
+					<option value="ow">Off-White (default)</option>
+					<option value="w">White</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="bgcolor_results_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_BGCOLOR_RESULTS_CUSTOM" description="MOD_DUCKDUCKGO_BGCOLOR_RESULTS_CUSTOM_DESC" />
+
+				<field name="text_color" type="list" default="w"
+					label="MOD_DUCKDUCKGO_TEXT_COLOR" description="MOD_DUCKDUCKGO_TEXT_COLOR_DESC">
+					<option value="g">Dark Grey (default)</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="text_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_TEXT_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_TEXT_COLOR_CUSTOM_DESC" />
+
+				<field name="links_color" type="list" default="w"
+					label="MOD_DUCKDUCKGO_LINKS_COLOR" description="MOD_DUCKDUCKGO_LINKS_COLOR_DESC">
+					<option value="0265CF">Blue (default)</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="links_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_LINKS_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_LINKS_COLOR_CUSTOM_DESC" />
+
+				<field name="visited_links_color" type="list" default="p"
+					label="MOD_DUCKDUCKGO_VISITED_LINKS_COLOR" description="MOD_DUCKDUCKGO_VISITED_LINKS_COLOR_DESC">
+					<option value="6927BE">Purple (default)</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="visited_links_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_VISITED_LINKS_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_VISITED_LINKS_COLOR_CUSTOM_DESC" />
+
+				<field name="border_color" type="list" default="e"
+					label="MOD_DUCKDUCKGO_BORDER_COLOR" description="MOD_DUCKDUCKGO_BORDER_COLOR_DESC">
+					<option value="e">Grey (default)</option>
+					<option value="r">Red</option>
+					<option value="#">Custom</option>
+				</field>
+
+				<field name="border_color_custom" type="text" default=""
+					label="MOD_DUCKDUCKGO_BORDER_COLOR_CUSTOM" description="MOD_DUCKDUCKGO_BORDER_COLOR_CUSTOM_DESC" />
+
+			</fieldset>
+
+		</fields>
 	</config>
-	
+
 </extension>

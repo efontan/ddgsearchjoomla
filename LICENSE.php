@@ -1,14 +1,15 @@
 <?php 
-defined('_JEXEC') or die('Restricted access');
+
 /**
  * @package ElGolem
  * @subpackage mod_duckduckgo_search
- * @version   1.0.1 - 12/04/2012
+ * @version   1.1.1 - 10/07/2012
  * @author    Emmanuel Fontan
  * @copyright (C) 2012 Emmanuel Fontan (email : fontanemmanel@gmail.com)
  *
  */
- ?>
+defined('_JEXEC') or die('Restricted access');
+?>
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
