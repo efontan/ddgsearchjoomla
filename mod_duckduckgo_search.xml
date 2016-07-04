@@ -2,7 +2,7 @@
 <extension type="module" version="1.7.0" method="upgrade">
 	<name>DuckDuckGo Search Module</name>
 	<author>Emmanuel Fontan</author>
-	<authorEmail>fontanemmanuel@gmail.com</authorEmail>
+	<authorEmail>fontanemmanuel (@) gmail (dot) com</authorEmail>
 	<authorUrl>www.elgolem.com.ar</authorUrl>
 	<creationDate>10/07/2012</creationDate>
 	<copyright>2012 Emmanuel Fontan</copyright>
