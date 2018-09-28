@@ -5,7 +5,7 @@
  * @subpackage mod_duckduckgo_search
  * @version   1.1.1 - 10/07/2012
  * @author    Emmanuel Fontan
- * @copyright (C) 2012 Emmanuel Fontan (email : fontanemmanel@gmail.com)
+ * @copyright (C) 2012 Emmanuel Fontan
  *
  * @license		GNU/GPL, see LICENSE.php
  * This program is free software: you can redistribute it and/or modify
